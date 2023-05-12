@@ -36,6 +36,7 @@ export default{
 <template>
   <div>
     <HeaderVue/>
+    <MainVue/>
   </div>
 </template>
 

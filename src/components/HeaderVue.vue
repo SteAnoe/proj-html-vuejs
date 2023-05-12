@@ -11,8 +11,8 @@ export default{
 </script>
 
 <template>
-  <header class="py-3">
-    <nav class="d-flex justify-content-between align-items-center mt-3">
+  <header class="pt-3">
+    <nav class="d-flex justify-content-between align-items-center my-3">
       <div id="nav-left">
         <img src="../assets/img/theme_eduprime_logo.png" alt="">
       </div>
@@ -45,9 +45,14 @@ export default{
         </ul>
       </div>
     </nav>
-    <div id="jumbo">
-      <div class="container">
+    <div id="jumbo" class="justify-content-center align-items-center">
+      <div class="container text-center text-white">
         <h1>Key to your success</h1>
+        <p class="mt-5">EduPrime is the most versatile WordPress theme for educational purposes, <br> showcasing universities, courses, secondary schools etc.</p>
+        <div class="d-flex justify-content-center gap-5 mt-5">
+          <a class="btn btn-yellow text-white" href="#"><strong>Search courses</strong></a>
+          <a class="btn btn-white" href="#"><strong>Apply for universities</strong></a>
+        </div>
       </div>
     </div>
   </header>
@@ -56,6 +61,8 @@ export default{
 <style lang="scss" scoped>
 header{
   background-color: #E56768;
+  position: relative;
+  height: 700px;
   nav{
     margin: 0 auto;
     width: 95%;
@@ -69,19 +76,35 @@ header{
     }
     #nav-right{
       width: 60%;
-      .btn{
-        border-radius: 40px;
-        padding: 10px 20px;
-      }
-      .btn-yellow{
-        background-color: #E9D758;
-      }
     }
   }
   #jumbo{
-    background-image: url(../assets/img/theme_slider2_bg-1.jpg);
     height: 500px;
+    font-weight: bold;
+    .container{
+      padding-top: 100px;
+      width: 50%;
+      h1{
+        font-size: 60px;
+      }
+      .btn-white{
+        background-color: white;
+        color: #E56768;
+      }
+    }
   }
+}
+header::before{
+  background-image: url(../assets/img/theme_slider2_bg-1.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  content: "";
+  opacity: 0.1;
+  background-size: cover;
 }
 
 </style>
