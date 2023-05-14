@@ -3,12 +3,14 @@ import axios from 'axios';
 import {store} from './store';
 import HeaderVue from './components/HeaderVue.vue';
 import MainVue from './components/MainVue.vue';
+import FooterVue from './components/FooterVue.vue';
 
 export default{
   name: "App",
   components: {
     HeaderVue,
-    MainVue
+    MainVue,
+    FooterVue
   },
   data(){
     return{
@@ -37,6 +39,7 @@ export default{
   <div>
     <HeaderVue/>
     <MainVue/>
+    <FooterVue/>
   </div>
 </template>
 
