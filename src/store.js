@@ -59,6 +59,7 @@ export const store = reactive(
             price: '$50.00',
             img: '../src/assets/img/Brand-icon.png'
         },
-      ]
+      ],
+      
     }
 )
