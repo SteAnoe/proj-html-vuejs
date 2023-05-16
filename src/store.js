@@ -34,6 +34,18 @@ export const store = reactive(
             active: false
         }
       ],
+      eventsArray: [
+        {
+            date: '20 May 21:30 PM'
+        },
+        {
+            date: '23 May 21:30 PM'
+        },
+        {
+            date: '25 May 21:30 PM'
+        },
+      
+      ],
       coursesArray: [
         {
             text: 'Make Better Decisions',

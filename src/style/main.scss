@@ -86,3 +86,21 @@ li{
 .activeText{
     color: white !important;
 }
+
+.btn:hover{
+    animation: bounce 1s linear;
+}
+@keyframes bounce{
+    20%,50%,80%, to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
+}

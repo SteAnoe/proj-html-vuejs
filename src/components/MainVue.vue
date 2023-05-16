@@ -13,6 +13,7 @@ export default{
       activeComp: 0,
     }
   },
+ 
   methods: {
     
   changeCourse(elem, index){
@@ -27,7 +28,22 @@ export default{
       <a class="btn btn-yellow text-white" href="#"><strong>Browse through courses</strong></a>
     </div>
     `
-  }
+  },
+  randomNumber(){
+    return Math.floor(Math.random() * 31) + 1;
+  },
+  moreEvents(){ 
+    let obj = ''
+    for (let i = 0; i < 3; i++){
+      obj = {
+        date: `${this.randomNumber()} May 21:30 PM`
+      }
+      if (store.eventsArray.length < 6){
+        store.eventsArray.push(obj)   
+      } else{
+      } 
+    } 
+  },
   
   }
 }
@@ -84,6 +100,7 @@ export default{
         </div>
       </div>
     </section>
+    
     <img id="wave-2" src="../assets/svg/svg-0.svg" alt=""> 
     <section id="uni-year">
       <div class="container text-center">
@@ -119,10 +136,10 @@ export default{
         </div>
         <h2 class="text-white fw-bold">Upcoming Events</h2>
       </div>
-      <div class="container d-flex justify-content-between align-items-center">
-        <div class="box-event card text-center p-5">
-          <H4>Coaching Session</H4>
-          <div><i class="fa-solid fa-calendar-days"></i> 20 May 21:30 PM</div>
+      <div class="container d-flex justify-content-between align-items-center flex-wrap">
+        <div class="box-event card text-center p-5 mb-5 animate__animated animate__backInLeft" v-for="(elem, index) in store.eventsArray" :key="index">
+          <h4>Coaching Session</h4>
+          <div><i class="fa-solid fa-calendar-days"></i>{{ elem.date }}</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
           <div class="btn btn-pink-to-yellow text-white">
             <a href="#">
@@ -131,32 +148,12 @@ export default{
             </a>
           </div>
         </div>
-        <div class="box-event card text-center p-5">
-          <H4>Coaching Session</H4>
-          <div><i class="fa-solid fa-calendar-days"></i> 23 May 21:30 PM</div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
-          <div class="btn btn-pink-to-yellow text-white">
-            <a href="#">
-              <i class="fa-solid fa-plus me-2"></i>
-              <strong>Find More</strong>
-            </a>
-          </div>
-        </div>
-        <div class="box-event card text-center p-5">
-          <H4>Coaching Session</H4>
-          <div><i class="fa-solid fa-calendar-days"></i> 26 May 21:30 PM</div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
-          <div class="btn btn-pink-to-yellow text-white">
-            <a href="#">
-              <i class="fa-solid fa-plus me-2"></i>
-              <strong>Find More</strong>
-            </a>
-          </div>
-        </div>
+    
+        
       </div>
       <div class="text-center pt-5">
-        <div class="btn btn-yellow text-white">
-            <a href="#">
+        <div class="btn btn-yellow text-white" @click="moreEvents()">
+            <a>
               <strong>View all events</strong>
             </a>
           </div>

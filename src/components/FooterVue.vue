@@ -68,7 +68,7 @@ export default{
         <p class="mt-5">EduPrime is the most versatile WordPress theme for educational purposes, <br> showcasing universities, courses, secondary schools etc.</p>
         <div id="socials">
           <span class="rounded-circle">
-            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-facebook-f "></i>
           </span>
           <span class="rounded-circle">
             <i class="fa-brands fa-twitter"></i>

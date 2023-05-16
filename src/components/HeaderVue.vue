@@ -41,7 +41,8 @@ export default{
   methods: {
     changeCurrent(index){
       this.currentActive = index
-    }
+    },
+   
   }
 }
 </script>
@@ -63,11 +64,11 @@ export default{
       </div>
       
     </div>
-    <nav class="d-flex justify-content-between align-items-center ">
+    <nav class="d-flex justify-content-between align-items-center">
       <div id="nav-left">
         <img src="../assets/img/theme_eduprime_logo.png" alt="">
       </div>
-      <div id="nav-right">
+      <div id="nav-right" class="animate__animated animate__backInRight">
         <ul class="d-flex justify-content-between align-items-center mb-0">
           <li v-for="(elem, index) in menuLinks" :key="index" @click="changeCurrent(index)" :class="(currentActive == index) ? 'active' : '' ">
             <a :class="(currentActive == index) ? 'active-bg' : '' " :href="elem.url"><strong>{{ elem.name }}</strong></a>
@@ -79,7 +80,7 @@ export default{
       </div>
     </nav>
     <div id="jumbo" class="justify-content-center align-items-center pt-5">
-      <div class="container text-center text-white">
+      <div class="container text-center text-white animate__animated animate__backInLeft">
         <h1>Key to your success</h1>
         <p class="mt-5">EduPrime is the most versatile WordPress theme for educational purposes, <br> showcasing universities, courses, secondary schools etc.</p>
         <div class="d-flex justify-content-center gap-5 mt-5">
@@ -196,5 +197,6 @@ header::before{
   position: relative;
   bottom: -200px;
 }
+
 
 </style>
