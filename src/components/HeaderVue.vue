@@ -99,6 +99,7 @@ export default{
         </div>
       </div>
     </div>
+    <img id="wave-1" src="../assets/img/Wave-1.png" alt="">
   </header>
 </template>
 
@@ -141,7 +142,7 @@ header{
     left: 0;
     right: 0;
     top: 0;
-    z-index: 2;
+    z-index: 20000000000;
     #nav-left{
       width: 20%;
       img{
@@ -190,6 +191,10 @@ header::before{
   opacity: 0.1;
   background-size: cover;
   z-index: 0;
+}
+#wave-1{
+  position: relative;
+  bottom: -200px;
 }
 
 </style>

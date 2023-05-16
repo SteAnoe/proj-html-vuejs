@@ -84,6 +84,7 @@ export default{
         </div>
       </div>
     </section>
+    <img id="wave-2" src="../assets/svg/svg-0.svg" alt=""> 
     <section id="uni-year">
       <div class="container text-center">
         <div id="clock-icon">
@@ -120,31 +121,34 @@ export default{
       </div>
       <div class="container d-flex justify-content-between align-items-center">
         <div class="box-event card text-center p-5">
-          <h5>Coaching Session</h5>
-          <div>20 May 21:30 PM</div>
+          <H4>Coaching Session</H4>
+          <div><i class="fa-solid fa-calendar-days"></i> 20 May 21:30 PM</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
           <div class="btn btn-pink-to-yellow text-white">
             <a href="#">
+              <i class="fa-solid fa-plus me-2"></i>
               <strong>Find More</strong>
             </a>
           </div>
         </div>
         <div class="box-event card text-center p-5">
-          <h5>Coaching Session</h5>
-          <div>23 May 21:30 PM</div>
+          <H4>Coaching Session</H4>
+          <div><i class="fa-solid fa-calendar-days"></i> 23 May 21:30 PM</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
           <div class="btn btn-pink-to-yellow text-white">
             <a href="#">
+              <i class="fa-solid fa-plus me-2"></i>
               <strong>Find More</strong>
             </a>
           </div>
         </div>
         <div class="box-event card text-center p-5">
-          <h5>Coaching Session</h5>
-          <div>26 May 21:30 PM</div>
+          <H4>Coaching Session</H4>
+          <div><i class="fa-solid fa-calendar-days"></i> 26 May 21:30 PM</div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium! Iure [..] </p>
           <div class="btn btn-pink-to-yellow text-white">
             <a href="#">
+              <i class="fa-solid fa-plus me-2"></i>
               <strong>Find More</strong>
             </a>
           </div>
@@ -157,8 +161,9 @@ export default{
             </a>
           </div>
       </div>
-      
+    
     </section>
+    <img id="wave-3" src="../assets/svg/svg-1.svg" alt=""> 
     <section id="latest-courses">
       <div class="container">
         <h2 class="fw-bold">Latest Courses</h2>
@@ -168,9 +173,15 @@ export default{
               <img :src="`${elem.img}`" alt="">
             </div>
             <div>
-              <h5>{{ elem.text }}</h5>
-              <h6>Teacher: {{ elem.teacher }}</h6>
-              <h6 class="pb-5">Price: {{ elem.price }}</h6>
+              <h5><strong>{{ elem.text }}</strong></h5>
+              <h6>
+                <i class="fa-regular fa-user"></i>
+                Teacher: {{ elem.teacher }}
+              </h6>
+              <h6 class="pb-5">
+                <i class="fa-solid fa-money-bill-1"></i>
+                Price: {{ elem.price }}
+              </h6>
               <div class="btn btn-pink-to-yellow"><a href="#"><strong><i class="fa-solid fa-eye"></i> View Course</strong></a></div>
             </div>
           </div>
@@ -320,15 +331,18 @@ main{
       .box-event{
         width: 32%;
         position: relative;
+        h4{
+          font-weight: bold;
+        }
         .btn{
-          background-color: #E56768;
+          
           position: absolute;
           bottom: -22px;
           left: 50%;
           transform: translateX(-50%);
         }
         .btn-pink-to-yellow{
-          background-color: #E56768;
+          background-color: #DA5F60E6;
           &:hover{
               background-color: #E9D758;
           }
@@ -350,7 +364,8 @@ main{
           .img-box{
             width: 100%;
             img{
-              width: 50%;
+              width: 30%;
+              margin-bottom: 30px;
             }
           }
           .btn{
@@ -373,6 +388,7 @@ main{
         }
       }
       .exam{
+        margin: 150px 0;
         .container{
           .left-box{
             width: 50%;
@@ -399,6 +415,7 @@ main{
         }
       }
       .fees{
+        margin-bottom: 150px;
         .container{
           .left-box{
             width: 50%;
@@ -427,6 +444,18 @@ main{
     }
     
   }
+}
+#wave-3{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  
+  left: -50px;
+  top: -2px;
+}
+#wave-2{
+  position: relative;
+  bottom: -2px;
 }
 
 </style>

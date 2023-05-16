@@ -130,8 +130,12 @@ footer{
     right: 20px;
     border-radius: 50%;
     padding: 10px 15px;
+    &:hover{
+      background-color: #E56768;
+      border: 1px solid #E9D758;
+    }
     &:hover i{
-      color: #E56768;
+      color: #E9D758;
     }
   }
   #newsletter{
@@ -154,6 +158,9 @@ footer{
           color: white;
           padding: 10px 10px;
           z-index: 200000;
+          &:hover{
+            background-color: #E56768 !important;
+          }
         }
       }
     }
@@ -243,6 +250,9 @@ footer{
           color: white;
           padding: 10px 15px;
           z-index: 200000;
+          &:hover{
+            background-color: #E56768 !important;
+          }
         }
         h6{
           margin-bottom: 40px;
@@ -258,6 +268,10 @@ footer{
             margin-bottom: 5px;
             font-size: 10px;
             cursor: pointer;
+            &:hover{
+              background-color: #E9D758;
+              color: #E56768;
+            }
           }
         }
       }
